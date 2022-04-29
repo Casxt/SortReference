@@ -1,0 +1,6 @@
+.vscode
+build
+dist
+test
+sort_reference.egg-info
+*.pyc
