@@ -37,7 +37,7 @@ print("Analysis reference...")
 ref_count, replace_map = ReorderReference(refs)
 for ref, count in ref_count.items():
     if count == 1:
-        print(f"WARNING: reference [{ref}] used at just one place, which means it may only be used in your Reference section.")
+        print(f"WARNING: Reference [{ref}] used at just one place, which means it may only be used in your Reference section.")
 change_ref_count = 0
 change_place_count = 0
 for old_id, new_id in replace_map.items():
@@ -48,7 +48,7 @@ for old_id, new_id in replace_map.items():
             print(f"reference [{old_id}] now change to [{new_id}]")
 print(f"Analysis reference complete, reorder {change_ref_count} references, {change_place_count} place will be changed.")
 
-print("reorder reference...")
+print("Reorder reference...")
 ReplaceSimpleReference(texts, replace_map)
 
 with zipfile.ZipFile(args.output, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=archive.compresslevel) as dest:
@@ -58,4 +58,5 @@ with zipfile.ZipFile(args.output, 'w', compression=zipfile.ZIP_DEFLATED, compres
         else:
             data = archive.read(file.filename)
         dest.writestr(file.filename, data)
-print("reorder reference succeed!")
+print("Reorder reference succeed!")
+print("Don't forget to edit the Reference section manually.")
