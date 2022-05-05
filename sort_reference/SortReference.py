@@ -92,7 +92,9 @@ def ReplaceSimpleReference(wt_elems, replace_map):
                     else:
                         temp_ref[-1][2] = p
                 elif c == ']':
-                    assert len(temp_ref) == 1, f"replace multi text block not support yet, total {len(temp_ref)} text sinppet: '{''.join([t.text for t in temp_ref])}' "
+                    assert len(temp_ref) == 1, f"""multi text blocks edit not support yet, 
+                    total {len(temp_ref)} text blocks in snippet: '{''.join([t[0].text for t in temp_ref])}',
+                    to solve this error, delete and rewrite this snippet could be useful."""
                     temp_t, s, e = temp_ref[-1][0], temp_ref[-1][1], temp_ref[-1][2]
                     new_idx = replace_map[temp_ref_str]
                     # update `p` if `p` still in current text
