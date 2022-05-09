@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="sort-reference",
-    version="0.1.1",
+    version="0.1.2",
     author="casxt",
     author_email="maple@forer.cn",
     description="Sort reference by cited order in docx file",

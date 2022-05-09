@@ -2,8 +2,7 @@
 
 按照文献引用顺序对文献进行编号。
 
-![效果图](img/demo.jpg?raw=true "demo")
-
+![demo](https://raw.githubusercontent.com/Casxt/SortReference/main/img/demo.jpg "demo")
 
 ## 支持的场景
 
@@ -36,7 +35,7 @@
 
 ### 1. AssertionError: multi text blocks edit not support yet
 
-![multi_text_blocks_error](img/multi_text_blocks_error.jpg?raw=true "multi_text_blocks_error")
+![multi_text_blocks_error](https://raw.githubusercontent.com/Casxt/SortReference/main/img/multi_text_blocks_error.jpg?raw=true "multi_text_blocks_error")
 
 **假设具体的报错内容是`total 2 text blocks in snippet: '12'`, 全文搜索找到每一处`[12]`, 删除其中的数字并重新输入一遍即可**
 
@@ -45,4 +44,5 @@
 `testcase/paper_badcase.docx`中复现了这一错误，只需要重新输入一遍`12`就可以解决。
 
 ### 2. 论文导出pdf出现“错误!未找到引用源”
+
 导出前使用`ctrl+a`和`ctrl+F11`禁用全局域更新，导出后`ctrl+a`和`ctrl+shift+F11`启用全局域更新即可。网络上有大量教程，可以自行搜索。理论上不是本程序导致的。
